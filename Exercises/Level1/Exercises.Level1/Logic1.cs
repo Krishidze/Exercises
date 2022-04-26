@@ -19,8 +19,36 @@ public class Logic1
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (cigars < 40)
+        {
+            return false;
+        }
+
+        if (isWeekend)
+        {
+            return true;
+        }
+
+        //if (cigars <= 60)
+        //{
+        //    return true;                
+        //}
+
+        return false;
+
+        //public bool CigarParty(int cigars, bool isWeekend)
+        //{
+        //    if (cigars >= 40 && (isWeekend || cigars <= 60))
+        //    {
+        //        return true;
+        //    }
+
+        //    return false;
     }
+
+
+    
 
     /// <summary>
     /// You and your date are trying to get a table at a restaurant. The parameter "you" is the
@@ -36,7 +64,23 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        // 1. ja kaut viens ir 2 vai mazak tad 0
+        if (you <= 2 || date <= 2)
+        { 
+        return 0;
+        }
+        // 2. ja kaut viens ir 8 vai vairak tad 2
+        if (you >= 8 || date >= 8)
+        {
+            return 2;
+        }
+
+    // 3. citadi 1
+
+    return 1;
+
     }
 
     /// <summary>
@@ -51,21 +95,42 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        int maxTemp = 90;
+        if (isSummer)
+        {
+            maxTemp += 10;
+
+        }
+
+        // 1. Ja temp ir starp 60 un 90 un nav vasara tad atgriezam true
+
+
+
+        if (temp >= 60 && temp <= maxTemp)
+        {
+            return true;
+        }
+        // 2. Ja temp ir starp 60 un 100 un ir vasara tad atgriežam true
+
+
+        // 3. Citadi atgriežam false 
+
+        return false;
     }
 
-    /// <summary>
-    /// You are driving a little too fast, and a police officer stops you. Write code to compute the
-    /// result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or
-    /// less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81
-    /// or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5
-    /// higher in all cases.
-    /// 
-    /// caughtSpeeding(60, false) → 0
-    /// caughtSpeeding(65, false) → 1
-    /// caughtSpeeding(65, true) → 0
-    /// </summary>
-    public int CaughtSpeeding(int speed, bool isBirthday)
+
+        /// <summary>
+        /// You are driving a little too fast, and a police officer stops you. Write code to compute the
+        /// result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or
+        /// less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81
+        /// or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5
+        /// higher in all cases.
+        /// 
+        /// caughtSpeeding(60, false) → 0
+        /// caughtSpeeding(65, false) → 1
+        /// caughtSpeeding(65, true) → 0
+        /// </summary>
+        public int CaughtSpeeding(int speed, bool isBirthday)
     {
         throw new NotImplementedException();
     }
