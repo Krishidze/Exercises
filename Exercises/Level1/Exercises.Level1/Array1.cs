@@ -19,7 +19,14 @@ public class Array1
     /// </summary>
     public bool FirstLast6(int[] nums)
     {
-        throw new NotImplementedException();
+        {
+            int first = nums[0];
+
+            int lastIndex = nums.Length - 1;
+            int last = nums[lastIndex];
+
+            return first == 6 || last == 6;
+        }
     }
 
     /// <summary>
@@ -32,7 +39,15 @@ public class Array1
     /// </summary>
     public bool SameFirstLast(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return false;
+        }
+        int firstElement = nums[0];
+        int lastIndex = nums.Length - 1;
+        int lastElement = nums[lastIndex];
+
+        return firstElement == lastElement;
     }
 
     /// <summary>
@@ -42,7 +57,9 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
-        throw new NotImplementedException();
+        {
+            return new int[] { 3, 1, 4 };
+        }
     }
 
     /// <summary>
@@ -55,9 +72,10 @@ public class Array1
     /// </summary>
     public bool CommonEnd(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        {
+            throw new NotImplementedException();
+        }
     }
-
     /// <summary>
     /// Given an array of ints length 3, return the sum of all the elements.
     /// 
@@ -67,8 +85,8 @@ public class Array1
     /// </summary>
     public int Sum3(int[] nums)
     {
-        throw new NotImplementedException();
-    }
+            { return (nums[0] + nums[1] + nums[2]); }
+        }
 
     /// <summary>
     /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
@@ -80,7 +98,8 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] rotated = { nums[1], nums[2], nums[0] };
+        return rotated;
     }
 
     /// <summary>
@@ -93,7 +112,8 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] reversed = { nums[2], nums[1], nums[0] };
+        return reversed;
     }
 
     /// <summary>
