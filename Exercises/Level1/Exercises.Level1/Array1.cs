@@ -73,7 +73,7 @@ public class Array1
     public bool CommonEnd(int[] a, int[] b)
     {
         {
-            throw new NotImplementedException();
+            { return (a[0] == b[0] || a[a.Length - 1] == b[b.Length - 1]); };
         }
     }
     /// <summary>
@@ -126,7 +126,13 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] maxVal = new int[3];
+        maxVal[0] = nums[0];
+        if (nums[2] >= maxVal[0])
+            maxVal[0] = nums[2];
+        maxVal[1] = maxVal[0];
+        maxVal[2] = maxVal[0];
+        return maxVal; ;
     }
 
     /// <summary>
@@ -140,7 +146,11 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length >= 2)
+            return (nums[0] + nums[1]);
+        if (nums.Length == 1)
+            return nums[0];
+        return 0; 
     }
 
     /// <summary>
@@ -178,7 +188,9 @@ public class Array1
     /// </summary>
     public bool Has23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums[0] == 2 || nums[0] == 3)
+            return true;
+        return (nums[1] == 2 || nums[1] == 3);
     }
 
     /// <summary>
@@ -217,7 +229,13 @@ public class Array1
     /// </summary>
     public bool Double23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 2)
+        {
+            if (nums[0] == 2 && nums[1] == 2)
+                return true;
+            return (nums[0] == 3 && nums[1] == 3);
+        }
+        return false;
     }
 
     /// <summary>
@@ -230,7 +248,12 @@ public class Array1
     /// </summary>
     public int[] Fix23(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] fxArr = { nums[0], nums[1], nums[2] };
+        if (nums[0] == 2 && nums[1] == 3)
+            fxArr[1] = 0;
+        if (nums[1] == 2 && nums[2] == 3)
+            fxArr[2] = 0;
+        return fxArr; ;
     }
 
     /// <summary>
@@ -243,7 +266,12 @@ public class Array1
     /// </summary>
     public int Start1(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int ones = 0;
+        if (a.Length >= 1 && a[0] == 1)
+            ones += 1;
+        if (b.Length >= 1 && b[0] == 1)
+            ones += 1;
+        return ones;
     }
 
     /// <summary>
